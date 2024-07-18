@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>ROADS IN TIME</title>
+    </head>
+    <body>
+        <script>
+            let userName = sessionStorage.getItem('userName');
+            while (!userName || userName.trim() === "") {
+                userName = prompt("What's your full name?");
+            }
+            sessionStorage.setItem('userName', userName);
+        </script>
+        <header>
+            <a href="index.html"><img src="images/headerphoto.png" alt="header" width="600" height="90"></a>
+        </header>
+
+        <nav class="navbar navbar-light navbar-expand-lg"><!-- Top navagation bar -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+                <ul class="navbar-nav" >
+                    <li id="main_tub" class="nav-item  mr-3">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="includes/News.html">News</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="includes/Car Accidents.html">Car Accidents</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="includes/Report An Accident.html">Report An Accident</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="includes/about.html">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline ">
+                        <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <section> 
+                <article><!-- First home page article -->
+                    <h2><u>Important Safety Tips</u></h2>
+                    <span><!-- responsive action -->
+                        <p>- Always wear your seatbelt and follow traffic rules.</p>
+                        <p>- Drive defensively and avoid distractions.</p>
+                        <p>- If you're in an accident, stay calm and call for help.</p>
+                    </span>
+                </article>
+                <span><!-- responsive action -->
+                    <div class="video"><!-- a video -->
+                        <iframe width="100%" height="338" src="https://www.youtube.com/embed/7TESgUA-JW4" title="14: Nine facts on road safety explained" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </span>
+                <article><!-- Second home page article -->
+                    <h2><u>Where is the most dangerous road in Israel?</u></h2>
+                    <p><span>As of my last update in January 2022, there isn't a single "most dangerous road" officially recognized in Israel. However, there are certain roads and sections of highways that have been known for higher rates of accidents due to various factors such as heavy traffic, challenging terrain, or inadequate infrastructure.</span></p>
+                </article>
+                <span><!-- responsive action -->
+                    <img class="center" src="images/AnnualGlobalCrash.jpg" alt="accidents Statistics" width="100%"><!-- an image -->
+                </span>
+                <article><!-- Third home page article -->
+                    <h2><u>The Role of Technology in Preventing Car Accidents</u></h2>
+                    <p><span>Advances in automotive technology, such as automatic emergency braking, lane departure warnings, and adaptive cruise control, play a vital role in preventing car accidents. These innovative features help detect potential dangers and assist drivers in avoiding collisions, ultimately enhancing overall road safety and saving lives.</span></p>
+                </article>   
+            </section>
+
+            <aside><!-- aside bar, showing adds and other functions-->
+                <a href="includes/Report An Accident.html" style="text-decoration: none"><button class="center report-button">Report an Accident</button></a><!--a button to "report an accident page"-->
+                <div id="emergency"><!--emergency contact via phone number and link to the police official site-->
+                    <h2>Emergency Contact</h2>
+                    <p>Call 100 in case of an emergency</p>
+                    <a href="https://www.gov.il/he/departments/israel_police/govil-landing-page" target="_blank"><img src="images/telephone.png" alt="telephone" width="50" height="50"></a>
+                </div>
+                <div class="center"><!--Adds-->
+                    <a href="https://monday.com" target="_blank"><img src="images/AD.png" alt = "AD" width="98%"></a><br><br>
+                    <a href="https://www.gool.co.il/free" target="_blank"><img src="images/gool.png" alt = "AD" width="98%"></a>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <nav class="bottom_nav"><!-- Bottom navagation bar -->
+                <ul>
+                    <table>
+                        <tr>
+                            <td><a href="index.html">Home</a></td>
+                            <td><a href="includes/News.html">News</a><br>
+                            <td><a href="includes/Car Accidents.html">Car Accidents</a></td><br>
+                            <td><a href=""></a></td><br>
+                        </tr>
+                        <tr>
+                            <td><a href="includes/Report An Accident.html">Report An Accident</a></td>
+                            <td><a href="includes/about.html">About</a></td><br>
+                        </tr>
+                    </table>
+                </ul>
+            </nav>
+            <div class="subscription"><!-- subsctiption button -->
+                <h2>Subscribe for Updates</h2>
+                <form id="subscribeForm">
+                    <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+
+                </form>                
+                <p> Roads in time website 2024. &copy; All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="JS/subscribe.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

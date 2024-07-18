@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <link rel="stylesheet" type="text/css" href="../css/calculators style.css">
+        <script src="../JS/calc java.js"></script>
+        <title>Calculators</title>
+    </head>
+    <body>
+        <header>
+            <a href="../index.html"><img src="../images/headerphoto.png" alt="header" width="600" height="90"></a>
+        </header>
+    
+        <nav class="navbar navbar-light navbar-expand-lg"><!-- Top navagation bar -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+                <ul class="navbar-nav" >
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link active" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="News.html">News</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="Car Accidents.html">Car Accidents</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="Report An Accident.html">Report An Accident</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline ">
+                        <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </ul>
+            </div>
+
+        </nav>
+        <main>
+            <div class="calculator-toggler">
+                <label for="calculatorSelect"> Choose Calculator: </label><br>
+                <select id="calculatorSelect" onchange="toggleCalculator()">
+                    <option value="">-none-</option>
+                    <option value="distance">Distance Calculator</option>
+                    <option value="gasoline">Gasoline Use Calculator</option>
+                </select>
+            </div>
+            <section>
+                <div id="calculatorContainer">
+                    <div id="distanceCalculator" class="calculator" style="display: none;"><!-- a calculator to calculate distances between cities -->
+                        <h2>Distance Calculator</h2>
+                        <p><b>Start point:</b></p>
+                        <select id="choice1"><!-- first city -->
+                            <option value="Tel Aviv">Tel Aviv</option>
+                            <option value="Beer Sheva">Beer Sheva</option>
+                            <option value="Haifa">Haifa</option>
+                            <option value="Eilat">Eilat</option>
+                        </select><br><br>
+                        <p><b>End point:</b></p>
+                        <select id="choice2"><!-- second city -->
+                            <option value="Eilat">Eilat</option>
+                            <option value="Haifa">Haifa</option>
+                            <option value="Beer Sheva">Beer Sheva</option>
+                            <option value="Tel Aviv">Tel Aviv</option>
+                        </select><br><br>
+                        <div class="submit">
+                            <button onclick="calculate()">Calculate</button>
+                        </div><br>
+                        <p id="result1"></p>
+                    </div>
+                    <div id="gasolineCalculator" class = "calculator" style="display: none;"><!-- a calculator to calculate the usage of gasoline using java script -->
+                        <h2>Gasoline Use Calculator</h2>
+                        <label for="name"><b>How many KM did you drive:</b></label><br>    
+                        <input type="number" id="firstNumber" placeholder="Enter KM"><br><br>
+                        <label for="name"><b>Enter full tank capacity:</b></label><br>
+                        <input type="number" id="secondNumber" placeholder="Enter full tank capacity"><br><br>
+                        <div class="submit">
+                        <button onclick="divide()">Calculate</button>
+                        </div><br>
+                        <p id="result"></p>
+                    </div>
+                </div>
+                           
+            </section>
+
+
+            <aside ><!-- aside bar, showing adds and other functions-->
+                <a href="Report An Accident.html" style="text-decoration: none"><button class="center report-button">Report an Accident</button></a>
+                <div id="emergency"><!--emergency contact via phone number and link to the police official site-->
+                    <h2>Emergency Contact</h2>
+                    <p>Call 100 in case of an emergency</p>
+                    <a href="https://www.gov.il/he/departments/israel_police/govil-landing-page" target="_blank"><img src="../images/telephone.png" alt="telephone" width="50" height="50"></a>
+                </div>
+                <div class="center"><!--Adds-->
+                    <a href="https://monday.com" target="_blank"><img src="../images/AD.png" alt = "AD" width="98%"></a><br><br>
+                    <a href="https://www.gool.co.il/free" target="_blank"><img src="../images/gool.png" alt = "AD" width="98%"></a>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <nav class="bottom_nav"><!-- Bottom navagation bar -->
+                <ul>
+                    <table>
+                        <tr>
+                            <td><a href="../index.html">Home</a></td>
+                            <td><a href="News.html">News</a><br>
+                            <td><a href="Car Accidents.html">Car Accidents</a></td><br>
+                            <td><a href=""></a></td><br>
+                        </tr>
+                        <tr>
+                            <td><a href="Report An Accident.html">Report An Accident</a></td>
+                            <td><a href="about.html">About</a></td><br>
+                        </tr>
+                    </table>
+                </ul>
+            </nav>
+            <div class="subscription"><!-- subsctiption button -->
+                <h2>Subscribe for Updates</h2>
+                <form id="subscribeForm">
+                    <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>                
+                <p> Roads in time website 2024. &copy; All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <script src="../JS/subscribe.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

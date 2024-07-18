@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <link rel="stylesheet" type="text/css" href="../css/statistics style.css">
+        <script src="../JS/java.js"></script>
+        <title>Statistics</title>
+    </head>
+    <body>
+        <header>
+            <a href="../index.html"><img src="../images/headerphoto.png" alt="header" width="600" height="90"></a>
+        </header>
+    
+        <nav class="navbar navbar-light navbar-expand-lg"><!-- Top navagation bar -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+                <ul class="navbar-nav" >
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link active" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="News.html">News</a>
+                    </li>
+                    <li class="nav-item  mr-3 ">
+                        <a class="nav-link" href="Car Accidents.html">Car Accidents</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="Report An Accident.html">Report An Accident</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline ">
+                        <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <section>
+                <span>
+                    <article>
+                        <div class="chart-container">  <canvas id="myChart"></canvas><!-- bars chart -->
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                            <script>
+                            const ctx = document.getElementById('myChart');
+                            new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
+                                datasets: [{
+                                    label: 'Number of deaths in israel each year',
+                                    data: [315, 314, 302, 361, 348, 358],
+                                    borderWidth: 1,
+                                    backgroundColor: ['#b62d2d']
+                                }]
+                                },
+                                options: {
+                                scales: {
+                                    
+                                    y: {
+                                    beginAtZero: true
+                                    }
+                                }
+                                }
+                            });
+                            </script>
+                        </div>
+                    </article>
+                </span>
+                <a href="calc.html" style="text-decoration: none"><button class="banner animated-text">Try our new calculators!</button></a>
+                <article><!-- main article, including spans to be hidden due to responsive acts -->
+                    <h2><u>Statistics about car accidents in israel</u></h2>
+                    <p><b>Fatalities:</b> In 2022, there were 351 road deaths in Israel [ITF].
+                        <span>This translates to a road mortality rate of 3.6 deaths per 100,000 people [ITF].</span></p>
+                    <p><b>Accidents:</b> There were 56,948 road accidents involving casualties in 2022 [National Road Safety Authority].</p>
+                    <p><b>Severity:</b> While fatalities decreased slightly in 2022 compared to 2021, 
+                        <span>the number of people seriously injured rose [The Media Line].</span></p>
+                    <p><b>Pedestrians:</b> It's important to note that pedestrians made up 31% of all road deaths in 2022 [ITF].</p>
+                    <p><b>Vehicle Type:</b> Motorcycles pose a higher risk, <span>with the number of serious injuries or fatalities in motorcycle accidents being 
+                        17.8 times higher than private vehicles [National Road Safety Authority].</span></p>
+                </article>
+            </section>
+
+            <aside ><!-- aside bar, showing adds and other functions-->
+                <a href="Report An Accident.html" style="text-decoration: none"><button class="center report-button">Report an Accident</button></a>
+                <div id="emergency"><!--emergency contact via phone number and link to the police official site-->
+                    <h2>Emergency Contact</h2>
+                    <p>Call 100 in case of an emergency</p>
+                    <a href="https://www.gov.il/he/departments/israel_police/govil-landing-page" target="_blank"><img src="../images/telephone.png" alt="telephone" width="50" height="50"></a>
+                </div>
+                <div class="center"><!--Adds-->
+                    <a href="https://monday.com" target="_blank"><img src="../images/AD.png" alt = "AD" width="98%"></a><br><br>
+                    <a href="https://www.gool.co.il/free" target="_blank"><img src="../images/gool.png" alt = "AD" width="98%"></a>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <nav class="bottom_nav"><!-- Bottom navagation bar -->
+                <ul>
+                    <table>
+                        <tr>
+                            <td><a href="../index.html">Home</a></td>
+                            <td><a href="News.html">News</a><br>
+                            <td><a href="Car Accidents.html">Car Accidents</a></td><br>
+                            <td><a href=""></a></td><br>
+                        </tr>
+                        <tr>
+                            <td><a href="Report An Accident.html">Report An Accident</a></td>
+                            <td><a href="about.html">About</a></td><br>
+                        </tr>
+                    </table>
+                </ul>
+            </nav>
+            <div class="subscription"><!-- subsctiption button -->
+                <h2>Subscribe for Updates</h2>
+                <form id="subscribeForm">
+                    <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+
+                </form>                
+                <p> Roads in time website 2024. &copy; All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <script src="../JS/subscribe.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

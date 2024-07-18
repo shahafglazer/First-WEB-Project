@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <link rel="stylesheet" type="text/css" href="../css/form style.css">
+        <script src="../JS/report java.js"></script>
+        <title>Report An Accident</title>
+    </head>
+    <body>
+        <header>
+            <a href="../index.html"><img src="../images/headerphoto.png" alt="header" width="600" height="90"></a>
+        </header>
+
+        <nav class="navbar navbar-light navbar-expand-lg"><!-- Top navagation bar -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+                <ul class="navbar-nav" >
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link active" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="News.html">News</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="Car Accidents.html">Car Accidents</a>
+                    </li>
+                    <li id="main_tub" class="nav-item  mr-3">
+                        <a class="nav-link" href="Report An Accident.html">Report An Accident</a>
+                    </li>
+                    <li class="nav-item  mr-3">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline ">
+                        <input class="form-control w-100" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Report an Accident</h2>
+                <p>Please use the form below to report any car accidents you have witnessed or been involved in.</p>
+                <form onsubmit="return validateForm()" action="submit.php" method="post"><!-- Report an accident form, data is sent into out database using php -->
+                    <div class="form-group">
+                        <label for="name">Your Full Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" aria-describedby="nameError">
+                        <small id="nameError" class="text-danger"></small> <!-- Error message -->
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" aria-describedby="emailError">
+                        <small id="emailError" class="text-danger"></small> <!-- Error message -->
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Accident Location:</label>
+                        <input type="text" class="form-control" id="location" name="location" placeholder="Enter accident location" aria-describedby="locationError">
+                        <small id="locationError" class="text-danger"></small> <!-- Error message -->
+                    </div>
+                    <div class="form-group">
+                        <label for="licensePlate">License Plate:</label>
+                        <input type="text" class="form-control" id="licensePlate" name="licensePlate" placeholder="Enter license plate number (7-8 digits)" aria-describedby="licensePlateError" pattern="\d{7,8}">
+                        <small id="licensePlateError" class="text-danger"></small> <!-- Error message -->
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Accident Description:</label>
+                        <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter accident description" aria-describedby="descriptionError" minlength="10"></textarea>
+                        <small id="descriptionError" class="text-danger"></small> <!-- Error message -->
+                    </div>
+                    <div>
+                        <label for="image">Add an image:</label><br>
+                        <input class="txt" type="file" name="myfile" >
+                    </div><br>
+                    <div class="submit">
+                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <script>
+            window.onload = function() {
+                const userName = sessionStorage.getItem('userName');
+                if (userName) {
+                    // Inserting userName into the name input
+                    const nameInput = document.getElementById('name');
+                    nameInput.value = userName; 
+                    navBar.parentNode.insertBefore(greeting, navBar.nextSibling);
+                }
+            }
+        </script>
+
+        <footer>
+            <nav class="bottom_nav"><!-- Bottom navagation bar -->
+                <ul>
+                    <table>
+                        <tr>
+                            <td><a href="../index.html">Home</a></td>
+                            <td><a href="News.html">News</a><br>
+                            <td><a href="Car Accidents.html">Car Accidents</a></td><br>
+                            <td><a href=""></a></td><br>
+                        </tr>
+                        <tr>
+                            <td><a href="Report An Accident.html">Report An Accident</a></td>
+                            <td><a href="about.html">About</a></td><br>
+                        </tr>
+                    </table>
+                </ul>
+            </nav>
+            <div class="subscription"><!-- subsctiption button -->
+                <h2>Subscribe for Updates</h2>
+                <form id="subscribeForm">
+                    <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+
+                </form>                
+                <p> Roads in time website 2024. &copy; All rights reserved.</p>
+            </div>
+        </footer>
+        
+        <script src="../JS/subscribe.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

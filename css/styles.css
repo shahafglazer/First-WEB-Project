@@ -1,0 +1,200 @@
+/*body style*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    width: 100%;
+
+}
+
+/*header style*/
+header {
+    background-color: #333;
+    color: white !important;
+    text-align: center;
+    padding: 1px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/*nav bar styles: */
+nav {
+    background-color: #b62d2d;
+    box-sizing: border-box;
+    padding: 8px;
+    text-align: center;
+    text-decoration:none;
+    color:white !important;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: white !important;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px; 
+    box-sizing: border-box;
+    transition: background-color 0.3s ease; 
+}
+
+nav a:hover {
+    background-color: #922020;
+    text-decoration: none;
+    transform: scale(1.1); /* Scale up on hover for a subtle effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/*main section style*/
+main {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+/*section style*/
+section {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*article style*/
+article {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px black;
+}
+
+/*aside style*/
+aside{
+    margin-top: 20px;
+    width: 200px;
+}
+
+/*footer style*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    clear: both;
+}
+
+/*IDs:*/
+/*emergency style - for emergency button on aside section*/
+#emergency {
+    flex: 0.3; 
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #777;
+    box-sizing: border-box;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/*main tub style for all pages*/
+#main_tub{
+    background-color: #922020 ;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px black;
+}
+
+/*Classes:*/
+/*centralize object*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+/*video style*/
+.video{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+/*bottom navagation bar style*/
+.bottom_nav{
+    background-color: #333;
+}
+.navbar-toggler {
+    border-color: white !important;
+}
+
+/*subscription buttoon style*/
+.subscription {
+    background-color: #333;
+    text-align: center;
+}
+.subscription h2 {
+    margin-bottom: 5px;
+}
+.subscription form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscription input[type="email"] {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.subscription button {
+    padding: 10px 20px;
+    background-color:wheat;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.subscription button:hover {
+    background-color: #555;
+}
+
+/*report buttoon style*/
+.report-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2384a7; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+.report-button:hover {
+    background-color: #922020 ;  
+    text-decoration: none;
+}
+
+/*media query to responsive acts*/
+@media(max-width: 992px) {
+	span{display:none;}
+}
+

@@ -1,0 +1,72 @@
+/*chart on statistics page style*/
+.chart-container {
+    width: 700px;  
+    height: 400px; 
+    margin: 0 auto;  
+    padding: 10px;  
+}
+
+/*more stats buttoon style: */
+.more-stats-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f0f0f0; 
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.more-stats-button:hover {
+    background-color: #922020 ;
+    color: white; 
+}
+
+/*banner styles: */
+.banner {
+    display: flex; /* Utilize flexbox for more control */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 20px auto;
+    border-radius: 10px; /* Increase border radius for smoother corners */
+    padding: 30px; /* Increase padding for better spacing */
+    font-family: monospace; 
+    font-size: 20px; /* Slightly larger font size for better readability */
+    color: #fff; /* Light text color for contrast */
+    width: 91%;
+    /* Add a gradient background for depth */
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    cursor: pointer; /* Change cursor to pointer by default */
+}
+
+/* Hover effect */
+.banner:hover {
+    transform: scale(1.1); /* Scale up on hover for a subtle effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.banner:not(:hover) {
+    animation: text-animation 3s infinite; /* Apply animation when not hovered */
+}
+
+@keyframes text-animation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(15px);
+    }
+    50% {
+        transform: translateX(-15px);
+    }
+    75% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+

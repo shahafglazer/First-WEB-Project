@@ -1,0 +1,10 @@
+/*submit buttoon style*/
+.submit button{
+    background-color: #b62d2d;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+.submit button:hover {
+    background-color: #922020;
+}

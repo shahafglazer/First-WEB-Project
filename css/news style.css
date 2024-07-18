@@ -1,0 +1,15 @@
+/*years buttoon style*/
+.years button{
+    background-color: rgb(216, 214, 214);
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+}
+.years button:hover {
+    background-color: #922020;
+    color: white;
+}
+.clicked {
+    background-color: #922020 !important;; /* Change the color of the pressed button */
+    color: white !important;
+}
